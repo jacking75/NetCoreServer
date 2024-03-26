@@ -9,14 +9,12 @@
 [![MacOS](https://github.com/chronoxor/NetCoreServer/actions/workflows/build-macos.yml/badge.svg)](https://github.com/chronoxor/NetCoreServer/actions/workflows/build-macos.yml)
 [![Windows (Visual Studio)](https://github.com/chronoxor/NetCoreServer/actions/workflows/build-windows.yml/badge.svg)](https://github.com/chronoxor/NetCoreServer/actions/workflows/build-windows.yml)
 
-Ultra fast and low latency asynchronous socket server & client C# .NET Core
-library with support TCP, SSL, UDP, Unix Domain Socket, HTTP, HTTPS, WebSocket protocols and [10K connections problem](https://en.wikipedia.org/wiki/C10k_problem)
-solution.
-
-Has integration with high-level message protocol based on [Fast Binary Encoding](https://github.com/chronoxor/FastBinaryEncoding)
-
-[NetCoreServer documentation](https://chronoxor.github.io/NetCoreServer)<br/>
-[NetCoreServer downloads](https://github.com/chronoxor/NetCoreServer/releases)<br/>
+지연 시간이 짧은 초고속 비동기 소켓 서버 및 클라이언트 C# .NET Core 라이브러리로 TCP, SSL, UDP, Unix 도메인 소켓, HTTP, HTTPS, WebSocket 프로토콜 및 [10K 연결 문제](https://en.wikipedia.org/wiki/C10k_problem) 해결을 지원한다.  
+  
+[Fast Binary Encoding](https://github.com/chronoxor/FastBinaryEncoding) 기반의 하이레벨 메시지 프로토콜과 통합 가능  
+  
+<br/>  
+  
 
 # Contents
   * [Features](#features)
@@ -86,7 +84,7 @@ Has integration with high-level message protocol based on [Fast Binary Encoding]
 * Linux
 * MacOS
 * Windows
-* [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+* [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 * [7-Zip](https://www.7-zip.org)
 * [cmake](https://www.cmake.org)
 * [git](https://git-scm.com)
@@ -130,10 +128,10 @@ The build script will create "release" directory with zip files:
 # Examples
 
 ## Example: TCP chat server
-Here comes the example of the TCP chat server. It handles multiple TCP client
-sessions and multicast received message from any session to all ones. Also it
-is possible to send admin message directly from the server.
-
+다음은 TCP 채팅 서버의 예이다.  
+이 서버는 여러 TCP 클라이언트 세션을 처리하고 모든 세션에서 모든 세션으로 수신된 메시지를 멀티캐스트한다.  
+또한 서버에서 직접 관리자 메시지를 보낼 수도 있다.  
+  
 ```c#
 using System;
 using System.Net;
